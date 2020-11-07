@@ -55,10 +55,10 @@ func EvaluatePostfix(input string) (string, error) {
 		} else {
 			floatNumber, err := stringToFloat(element)
 			if err != nil {
-				return "", fmt.Errorf("Cannot parse expression")
+				return "", fmt.Errorf("Expression contains invalid characters")
 			}
 			stack = append(stack, floatNumber)
 		}
 	}
-	return stack[0], nil
+	return fmt.Sprintf("%.0f", stack[0]), nil
 }
