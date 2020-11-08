@@ -48,7 +48,7 @@ func EvaluatePostfix(input string) (string, error) {
 	var stack []float64
 	s := strings.Split(input, " ")
 
-	for _, element := range s {
+	for _, elemen := range s {
 		if fn, ok := functionsMap[element]; ok {
 			a, b := stack[len(stack)-1], stack[len(stack)-2]
 			stack = append(stack[:len(stack)-2], fn(a, b))
