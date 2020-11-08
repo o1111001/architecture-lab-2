@@ -1,6 +1,4 @@
-// TODO: Rename to your own module.
 module github.com/o1111001/architecture-lab-2
-
 go 1.14
 
 require (
